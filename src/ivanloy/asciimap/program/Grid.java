@@ -32,6 +32,7 @@ public class Grid {
 			case 4 : System.out.print("╗"); break;
 			case 5 : System.out.print("╚"); break;
 			case 6 : System.out.print("╝"); break;
+			case 7 : System.out.print("╬"); break;
 			
 		}
 		
@@ -52,7 +53,14 @@ public class Grid {
 	
 	public void rect(short x, short y, short width, short height) {
 		
-		//tile[col][row] = 3; //╔
+		tile[x][y] = 3;                                             //╔
+		hLine((short)(x+1), y, (short)(width-2));                   //═
+		hLine((short)(x+1), (short)(y+height-1), (short)(width-2)); //═
+		tile[x+width-1][y] = 4;                                     //╗
+		vLine(x, (short)(y+1), (short)(height-2));                  //║
+		vLine((short)(x+width-1), (short)(y+1), (short)(height-2)); //║
+		tile[x][y+height-1] = 5;                                    //╚
+		tile[x+width-1][y+height-1] = 6;                            //╝
 		
 	}
 	
@@ -60,10 +68,22 @@ public class Grid {
 		
 		for(short i = x; i < x + length; i++) {
 			
-			tile[i][y] = 1; //═
+			if(tile[i][y] == 2) tile[i][y] = 7; //╬
+			else tile[i][y] = 1;                //═
 			
 		}
 		
 	}
 	
+	public void vLine(short x, short y, short length) {
+		
+		for(short i = y; i < y + length; i++) {
+			
+			if(tile[x][i] == 1) tile[x][i] = 7; //╬
+			else tile[x][i] = 2;                //║
+			
+		}
+		
+	}
+
 }
