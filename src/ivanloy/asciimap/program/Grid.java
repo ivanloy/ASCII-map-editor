@@ -55,11 +55,14 @@ public class Grid {
 		
 	}
 	
+<<<<<<< HEAD
 	public void rect(int x, int y, int width, int height) {
 		
 		rect((short)x, (short)y, (short)width, (short)height);
 		
 	}
+=======
+>>>>>>> 1fd89b554e0819aa06aacc6891b641d8514c1041
 	public void rect(short x, short y, short width, short height) { //COMENTAR MEJOR TODO ESTO
 		
 		if(tile[x][y] == 2 || tile[x][y] == 5) tile[x][y] = 8;
