@@ -15,6 +15,12 @@ public class Grid {
 		
 	}
 	
+	public void setTile(int tile, int x, int y) {
+		
+		setTile((byte)tile, (short)x, (short)y);
+		
+	}
+	
 	public void setTile(byte tile, short x, short y) {
 		
 		this.tile[x][y] = tile;
@@ -37,6 +43,7 @@ public class Grid {
 			case 9 : System.out.print("╣"); break;
 			case 10 : System.out.print("╦"); break;
 			case 11 : System.out.print("╩"); break;
+			case 12 : System.out.print("^"); break;
 			
 		}
 		
@@ -45,29 +52,29 @@ public class Grid {
 	public void printGrid() {
 		int rowCount = 0;
 		
-		System.out.print("    ");
-		for(short i = 0; i < cols; i++) {
+		//System.out.print("    ");
+		//for(short i = 0; i < cols; i++) {
 			
-			System.out.print(i/10); //poner hacia abajo 
+			//System.out.print(i/10); //poner hacia abajo 
 			
-		}
+		//}
 		
-		System.out.println();
+		//System.out.println();
 		
-		System.out.print("    ");
-		for(short i = 0; i < cols; i++) {
+		//System.out.print("    ");
+		//for(short i = 0; i < cols; i++) {
 			
-			System.out.print(i%10); //poner hacia abajo 
+			//System.out.print(i%10); //poner hacia abajo 
 			
-		}
+		//}
 		
 		System.out.println();
 		
 		for(short i = 0; i < rows; i++) {
 			
-			if(rowCount < 10) System.out.print(rowCount +"   ");
+			/*if(rowCount < 10) System.out.print(rowCount +"   ");
 			else if(rowCount < 100) System.out.print(rowCount +"  ");
-			else if(rowCount < 1000) System.out.print(rowCount +" ");
+			else if(rowCount < 1000) System.out.print(rowCount +" ");*/
 			
 			for(short j = 0; j < cols; j++) {
 			
