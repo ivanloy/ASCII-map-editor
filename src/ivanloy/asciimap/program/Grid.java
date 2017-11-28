@@ -12,8 +12,9 @@ public class Grid {
 		this.cols = cols;
 		
 		tile = new byte[cols][rows];
-		
+		System.out.println(rows + ", " + cols);
 	}
+	
 	
 	public void setTile(int tile, int x, int y) {
 		
