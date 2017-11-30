@@ -6,8 +6,8 @@ public class AsciiMapEditor {
 
 	public static void main(String[] args) {
 		
-		final short WIDTH = 15;
-		final short HEIGHT = 15;
+		final short WIDTH = 8;
+		final short HEIGHT = 8;
 		int casilla = 0;
 		int random = 0;
 		int suma = 0;
@@ -41,15 +41,13 @@ public class AsciiMapEditor {
 		
 		while(true) {
 			
-			
-			
 			board.cleanBoardTile(casilla);
 		
 			System.out.println("Pulse cualquier tecla para continuar...");
 			
-			scanner.next();
+			scanner.next(); 
 			
-			suma = Board.throwDices(2);
+			suma = Board.throwDices(1);
 			
 			System.out.println("Sacaste un " + suma);
 			casilla += suma;

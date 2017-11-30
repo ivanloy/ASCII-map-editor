@@ -55,10 +55,10 @@ public class Board {
 	
 	public void cleanBoardTile(int tile) {
 		
-		if(tile >= 0 && tile < width) grid.setTile(0, tile*6+3, 1);
-		else if(tile >= width && tile < width + height - 2) grid.setTile(0, 3+6 *(width-1), (tile-width+1)*3+1);
-		else if(tile >= width + height - 2 && tile < width * 2 + height - 2) grid.setTile(0, (6-tile+10-1)*6+3, 16); //QUEDAN ESTAS DOS, ARRIBA Y ABAJO
-		else grid.setTile(0, 3, (4-(tile-16+1-1))*3+1);
+		if(tile >= 0 && tile < width) grid.setTile(0, tile * 6 + 3, 1);
+		else if(tile >= width && tile < width + height - 2) grid.setTile(0, 3 + 6 *(width-1), (tile-width+1) * 3 + 1);
+		else if(tile >= width + height - 2 && tile < width * 2 + height - 2) grid.setTile(0, (width - 1 - tile + width + height - 2) * 6 + 3, (height-1) * 3 + 1); //QUEDAN ESTAS DOS, ARRIBA Y ABAJO
+		else grid.setTile(0, 3, (height - 3 - tile + width * 2 + height - 2 + 1) * 3 + 1);
 		
 	}
 	
@@ -66,8 +66,8 @@ public class Board {
 		
 		if(tile >= 0 && tile < width) grid.setTile(12, tile*6+3, 1);
 		else if(tile >= width && tile < width + height - 2) grid.setTile(12, 3+6*(width-1), (tile-width+1)*3+1);
-		else if(tile >= width + height - 2 && tile < width * 2 + height - 2) grid.setTile(12, (6-tile+10-1)*6+3, 16);
-		else grid.setTile(12, 3, (4-(tile-16+1-1))*3+1);
+		else if(tile >= width + height - 2 && tile < width * 2 + height - 2) grid.setTile(12, (width - 1 - tile + width + height - 2) * 6 + 3, (height-1) * 3 + 1);
+		else grid.setTile(12, 3, (height - 3 - tile + width * 2 + height - 2 + 1) * 3 + 1);
 		
 	}
 	
